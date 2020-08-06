@@ -6,6 +6,7 @@ import service.strategy.Strategy;
 import java.util.logging.Logger;
 
 public class FacadeServiceImpl implements FacadeService {
+    private final Logger log = Logger.getLogger(this.getClass().getName());
     private final ItemReader itemReader;
     private final Strategy strategy;
 
@@ -15,6 +16,7 @@ public class FacadeServiceImpl implements FacadeService {
     }
 
     public void result() {
+        log.info("[FacadeServiceImpl] - Calculating result");
         Integer result = strategy.apply(itemReader.read());
     }
 }
