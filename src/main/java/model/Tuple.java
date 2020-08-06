@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public final class Tuple {
     private final Integer left;
     private final Integer right;
@@ -20,5 +22,14 @@ public final class Tuple {
     @Override
     public String toString() {
         return "[" + left + ", " + right + "]";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tuple tuple = (Tuple) o;
+        return Objects.equals(left, tuple.left) &&
+                Objects.equals(right, tuple.right);
     }
 }
