@@ -1,4 +1,4 @@
-Set file path in program arguments or command line.
+Set file path in program arguments.
 Sample files given under resources package:
 * src/main/resources/file.txt
 * src/main/resources/file2.txt
