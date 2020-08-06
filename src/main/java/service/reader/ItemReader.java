@@ -4,7 +4,7 @@ import model.Tuple;
 
 import java.util.List;
 
-interface ItemReader {
+public interface ItemReader {
 
     List<Tuple> read();
 
