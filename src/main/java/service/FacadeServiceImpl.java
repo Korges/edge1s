@@ -18,5 +18,6 @@ public class FacadeServiceImpl implements FacadeService {
     public void result() {
         log.info("[FacadeServiceImpl] - Calculating result");
         Integer result = strategy.apply(itemReader.read());
+        log.info("[FacadeServiceImpl] - FINAL RESULT : " + result);
     }
 }
