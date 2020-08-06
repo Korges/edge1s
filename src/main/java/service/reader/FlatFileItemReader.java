@@ -3,7 +3,6 @@ package service.reader;
 import model.Tuple;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,10 +25,9 @@ public class FlatFileItemReader implements ItemReader {
             for (String s; (s = br.readLine()) != null;) {
                 tupleList.add(parseLine(s));
             }
-        } catch (FileNotFoundException e) {
-            log.warning(e.getMessage());
         } catch (IOException e) {
             log.warning(e.getMessage());
+            System.exit(1);
         }
         log.info("[FlatFileItemReader] - Reading has been finished");
         return tupleList;
