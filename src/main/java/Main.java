@@ -15,8 +15,7 @@ public class Main {
 
     private static void verifyIsPathGiven(String[] args) {
         if (args.length < 1) {
-            System.out.println("File Path not specified");
-            return;
+            throw new RuntimeException("File Path not specified");
         }
     }
 }
