@@ -15,6 +15,7 @@ public class FacadeServiceImpl implements FacadeService {
         this.strategy = strategy;
     }
 
+    @Override
     public void result() {
         log.info("[FacadeServiceImpl] - Calculating result");
         Integer result = strategy.apply(itemReader.read());
