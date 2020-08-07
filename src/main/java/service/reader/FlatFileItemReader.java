@@ -27,7 +27,7 @@ public class FlatFileItemReader implements ItemReader {
             }
         } catch (IOException e) {
             log.warning(e.getMessage());
-            System.exit(1);
+            throw new RuntimeException();
         }
         log.info("[FlatFileItemReader] - Reading has been finished");
         return tupleList;
